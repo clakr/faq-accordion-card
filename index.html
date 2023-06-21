@@ -10,8 +10,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="src/_preflight.css" />
-    
+
     <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- JS Modules -->
     <script type="module" src="src/main.ts" async></script>
@@ -19,7 +25,18 @@
   </head>
   <body>
     <main>
-     <h1 class="sr-only"></h1>
+      <h1 class="sr-only"></h1>
+      <div class="card">
+        <picture class="card__asset">
+          <source
+            media="(min-width: 1440px)"
+            srcset="/illustration-box-desktop.svg"
+          />
+          <img src="/illustration-woman-online-mobile.svg" alt="" />
+        </picture>
+        <h2 class="card__heading">FAQ</h2>
+        <pug src="src/details.pug" />
+      </div>
     </main>
   </body>
 </html>

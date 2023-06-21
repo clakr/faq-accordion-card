@@ -1,0 +1,127 @@
+:root {
+  --white: #ffffff;
+  --midnight-express: #1e1f36;
+  --gun-powder: #4b4c5f;
+  --storm-grey: #787887;
+
+  background-color: var(--white);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  padding-inline: 2.4rem;
+}
+
+.card {
+  background-color: var(--white);
+  background-image: url(/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 2.3rem;
+  position: relative;
+  padding: 13.2rem 2.4rem 4.8rem;
+  width: 32.7rem;
+  height: 53.5rem;
+
+  &__asset {
+    position: absolute;
+    width: 23.7rem;
+    height: 18rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(-60%));
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.969rem;
+    text-align: center;
+    color: var(--midnight-express);
+  }
+}
+
+.container--faqs {
+  margin-top: 3.8rem;
+}
+
+details {
+  border-bottom: 1px solid #e8e8ea;
+  padding-block: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--storm-grey);
+  cursor: pointer;
+
+  &[open] > summary {
+    margin-bottom: 1.3rem;
+    font-weight: bold;
+    color: var(--midnight-express);
+
+    & > svg {
+      rotate: 180deg;
+    }
+  }
+}
+
+summary {
+  font-size: 1.3rem;
+  line-height: 1.612rem;
+  color: var(--gun-powder);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding-inline: unset;
+  }
+
+  .card {
+    background-image: url(/illustration-woman-online-desktop.svg),
+      url(/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -8.4rem center,
+      left -58.4rem top calc(50% - 7.5rem);
+    padding: 6.5rem 9.5rem 8.3rem 47.5rem;
+    width: 92rem;
+    height: 53.5rem;
+
+    &__asset {
+      width: unset;
+      height: unset;
+      top: 50%;
+      left: 0;
+      transform: translateY(-25%) translateX(-65%);
+    }
+
+    &__heading {
+      text-align: start;
+    }
+  }
+
+  .container--faqs {
+    margin-top: 4.5rem;
+  }
+
+  details {
+    padding-block: 1.7rem;
+
+    &[open] > summary {
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  summary {
+    font-size: 1.4rem;
+    line-height: 1.736rem;
+  }
+}
